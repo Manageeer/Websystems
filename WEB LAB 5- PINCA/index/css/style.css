@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Body */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #d8d8d8; 
+    color: #df0f0f;
+    line-height: 1.6;
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+    color: #ff0000; 
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* Form Styles */
+#todo-form {
+    background: #ffffff;
+    padding: 22px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid #f5d1dc;
+    box-shadow: 0 4px 12px rgba(231, 84, 128, 0.1);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#todo-description,
+#todo-targetDate {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 16px;
+    border: 1px solid #f7c8d9;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #cb2020;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#todo-description:focus,
+#todo-targetDate:focus {
+    outline: none;
+    border-color: #000000; /* green focus */
+    box-shadow: 0 0 0 3px rgba(85, 85, 85, 0.2);
+}
+
+#todo-description::placeholder {
+    color: #da1b1b;
+}
+
+/* Submit Button */
+button[type="submit"] {
+    background: #ce1010;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+    min-width: 120px;
+}
+
+button[type="submit"]:hover {
+    background: #ce1010;;
+    transform: translateY(-2px);
+}
+
+/* Table Styles */
+#todo-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border: 1px solid #f5d1dc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(231, 84, 128, 0.05);
+}
+
+#todo-table thead {
+    background: #fde6eb;
+}
+
+#todo-table th {
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 15px;
+    color: #e11a1a;
+    border-bottom: 1px solid #f5d1dc;
+}
+
+#todo-table tbody tr {
+    border-bottom: 1px solid #fde6eb;
+    transition: background-color 0.2s ease;
+}
+
+#todo-table tbody tr:hover {
+    background: #fff0f4;
+}
+
+#todo-table td {
+    padding: 12px;
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+/* Checkbox Styles */
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #27ae60;
+    cursor: pointer;
+}
+
+/* Action Buttons */
+button.edit,
+button.delete {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 6px;
+    transition: all 0.2s ease;
+}
+
+button.edit {
+    background: #fde6eb;
+    color: #e31414;
+    border: 1px solid #f5c1d1;
+}
+
+button.edit:hover {
+    background: #fbc4d1;
+}
+
+button.delete {
+    background: #000000;
+    color: white;
+}
+
+button.delete:hover {
+    background: #1e8449;
+}
+
+/* Status Message */
+#status {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #2013ca;
+    color: #2c3e50;
+    font-style: italic;
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(39, 174, 96, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    #todo-form {
+        flex-direction: column;
+    }
+
+    #todo-description,
+    #todo-targetDate {
+        min-width: 100%;
+    }
+
+    #todo-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    #todo-table th,
+    #todo-table td {
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+
+    button.edit,
+    button.delete {
+        font-size: 13px;
+    }
+}
+
+/* Row Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#todo-table tbody tr {
+    animation: fadeIn 0.3s ease-in-out;
+}

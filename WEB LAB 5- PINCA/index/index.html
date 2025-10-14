@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todos — CRUD UI</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Todos (Table)</h1>
+
+  <form id="todo-form" aria-label="Add todo form">
+    <input id="todo-description" placeholder="Description" required />
+    <input id="todo-targetDate" type="date" />
+    <button type="submit">Add</button>
+  </form>
+
+  <table id="todo-table" aria-label="Todo table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Description</th>
+        <th>Target Date</th>
+        <th>Done</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="todo-tbody">
+      <!-- rows injected by JS -->
+    </tbody>
+  </table>
+
+  <div id="status" style="max-width:900px;margin-top:12px;color:#6b7280"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>

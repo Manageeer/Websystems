@@ -1,0 +1,15 @@
+Laboratory 7 – API Development Student: ______________________ Date:
+_________________________
+
+1.  Complete URL path for the POST endpoint: POST
+    http://localhost:8080/api/products
+
+2.  Complete URL path and expected status code for a non-existent item
+    in the GET by ID request: GET http://localhost:8080/api/products/999
+    Expected Status Code: 404 Not Found
+
+3.  Screenshot Requirement: A screenshot from Postman or Insomnia
+    showing a successful POST request to: POST
+    http://localhost:8080/api/products with a JSON body such as: {
+    “name”: “Sample Product”, “price”: 1500.00 } and the API returning
+    the response: 201 Created
